@@ -1,0 +1,24 @@
+def count_vowels_and_consonants(paragraph):
+    vowels = "aeiouAEIOU"
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+
+    vowel_count = 0
+    consonant_count = 0
+
+    for char in paragraph:
+        if char in vowels:
+            vowel_count += 1
+        elif char in consonants:
+            consonant_count += 1
+
+    return vowel_count, consonant_count
+
+# Get paragraph input from the user
+paragraph = input("Enter a paragraph: ")
+
+# Count vowels and consonants
+vowel_count, consonant_count = count_vowels_and_consonants(paragraph)
+
+# Print the results
+print(f"Number of vowels: {vowel_count}")
+print(f"Number of consonants: {consonant_count}")
